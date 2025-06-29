@@ -19,8 +19,6 @@ class EmailConfig:
     sender_password: str
     smtp_server: str
     smtp_port: int
-    recipient_csv_path: str
-    recipient_attachment_folder: str
     email_subject : str
 
 
@@ -94,8 +92,6 @@ def load_EmailConfig() -> EmailConfig:
         sender_password=os.getenv("SENDER_PASSWORD"),
         smtp_server=os.getenv("SMTP_SERVER"),
         smtp_port=int(os.getenv("SMTP_PORT")),
-        recipient_csv_path=os.getenv("RECIPIENT_CSV_PATH"),
-        recipient_attachment_folder=os.getenv("RECIPIENT_ATTACHMENT_FOLDER"),
         email_subject = os.getenv("EMAIL_SUBJECT")
     )
 
